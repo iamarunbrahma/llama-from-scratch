@@ -1,4 +1,4 @@
-# LLaMA-3 Model Implementation from Scratch
+# Implementation of LLaMA-3 Model from Scratch
 
 ### Introduction
 This Jupyter Notebook presents an implementation of the LLaMA-3 language model from scratch, focusing on the step-by-step process of tensor and matrix multiplication operations. The implementation utilizes the pre-trained weights provided by Meta for the LLaMA-3 model. Before running the code, it is necessary to download the weights file from the official link: [https://llama.meta.com/llama-downloads/](https://llama.meta.com/llama-downloads/).
