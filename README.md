@@ -1,16 +1,16 @@
-# Implementation of LLaMA-3 Model from Scratch
+# Implementation of Llama-3 Model from Scratch
 
 ### Introduction
-This Jupyter Notebook presents an implementation of the LLaMA-3 language model from scratch, focusing on the step-by-step process of tensor and matrix multiplication operations. The implementation utilizes the pre-trained weights provided by Meta for the LLaMA-3 model. Before running the code, it is necessary to download the weights file from the official link: [https://llama.meta.com/llama-downloads/](https://llama.meta.com/llama-downloads/).
+This Jupyter Notebook presents an implementation of the Llama-3 language model from scratch, focusing on the step-by-step process of tensor and matrix multiplication operations. The implementation utilizes the pre-trained weights provided by Meta for the Llama-3 model. Before running the code, it is necessary to download the weights file from the official link: [https://llama.meta.com/llama-downloads/](https://llama.meta.com/llama-downloads/).
 
 ### Tokenizer
-The implementation uses the tokenizer provided by Meta for the LLaMA-3 model. The tokenizer is responsible for converting the input text into a sequence of tokens, which are numerical representations of words or subword units.
+The implementation uses the tokenizer provided by Meta for the Llama-3 model. The tokenizer is responsible for converting the input text into a sequence of tokens, which are numerical representations of words or subword units.
 
 ### Loading Model Parameters
 Instead of instantiating a model class and loading the weights into corresponding variables, this implementation loads the model parameters directly from the pre-trained weights file, one tensor at a time. This approach allows for a more granular understanding of the model's architecture and the role of each tensor in the computation.
 
 ### Analyzing Model Configuration
-The loaded configuration dictionary provides insights into the architecture of the LLaMA-3 model, such as the number of transformer layers, attention heads, vocabulary size, and other hyperparameters. These configuration values help in understanding the model's capacity, complexity, and the specific architectural choices made during its design and training.
+The loaded configuration dictionary provides insights into the architecture of the Llama-3 model, such as the number of transformer layers, attention heads, vocabulary size, and other hyperparameters. These configuration values help in understanding the model's capacity, complexity, and the specific architectural choices made during its design and training.
 
 ### Converting Text to Tokens
 The input text is converted into a sequence of tokens using the `tiktoken` library, which is a tokenizer developed by OpenAI. The tokenizer breaks down the text into individual tokens, which are then represented as numerical values.
@@ -43,7 +43,7 @@ Value vectors are computed by multiplying the token embeddings with the value we
 The attention mechanism is applied across multiple heads, allowing the model to capture different aspects of the input simultaneously. The attention outputs from all heads are concatenated to form a single attention representation.
 
 ### Feed-Forward Network
-After the attention layer, a position-wise feed-forward network is applied to introduce non-linearity and capture complex relationships between the input embeddings. The LLaMA-3 model utilizes a SwiGLU (Swish-Gated Linear Unit) activation function in the feed-forward network.
+After the attention layer, a position-wise feed-forward network is applied to introduce non-linearity and capture complex relationships between the input embeddings. The Llama-3 model utilizes a SwiGLU (Swish-Gated Linear Unit) activation function in the feed-forward network.
 
 ### Processing Subsequent Layers
 The implementation extends the processing to the subsequent transformer layers, iterating over each layer and applying the attention and feed-forward networks sequentially. The embeddings are updated at each layer, incorporating increasingly complex interactions and dependencies.
@@ -52,6 +52,6 @@ The implementation extends the processing to the subsequent transformer layers, 
 The final embedding obtained after processing all the transformer layers represents the model's prediction for the next token. This embedding is decoded into the actual token value using the output decoder layer of the model.
 
 ### Conclusion
-This Notebook provides an overview of the step-by-step implementation of the LLaMA-3 language model from scratch, focusing on the key components such as tokenization, embedding, attention, positional encoding, and feed-forward networks. By implementing the model from the ground up, this project aims to deepen the understanding of the inner workings of the LLaMA-3 architecture and the transformations applied to the input data at each stage.
+This Notebook provides an overview of the step-by-step implementation of the Llama-3 language model from scratch, focusing on the key components such as tokenization, embedding, attention, positional encoding, and feed-forward networks. By implementing the model from the ground up, this project aims to deepen the understanding of the inner workings of the LLaMA-3 architecture and the transformations applied to the input data at each stage.
 
 The implementation showcases the power and flexibility of the transformer architecture in capturing complex language patterns and generating meaningful predictions. It serves as a valuable resource for those interested in understanding the intricacies of language modeling and exploring the capabilities of the LLaMA-3 model.
